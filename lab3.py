@@ -1,4 +1,25 @@
 import turtle
-turtle.forward(150)
-turtle.left(100
+'''
+turtle.forward(100)
+turtle.right(145)
+turtle.forward(100)
+turtle.right(145)
+turtle.forward(100)
+turtle.right(145)
+turtle.forward(100)
+turtle.right(145)
+turtle.forward(100)
+'''
+turtle.begin_fill()
+turtle.forward(50)
+turtle.right(90)
+turtle.forward(50)
+turtle.right(50)
+turtle.forward(50)
+turtle.right(90)
+turtle.forward(45)
+turtle.right(50)
+turtle.forward(45)
+turtle.home()
+turtle.end_fill()
 turtle.mainloop()
