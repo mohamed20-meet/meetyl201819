@@ -12,6 +12,7 @@ class Ball(Turtle):
 		self.color(color)
 		self.shape('circle')
 		self.penup()
+		self.goto(x,y)
 	def move(self,screen_width,screen_height):
 		current_x=self.xcor()
 		new_x=self.dx+current_x
@@ -38,6 +39,21 @@ MINIMUM_BALL_DX= -5
 MAXIMUM_BALL_DX=5
 MINIMUM_BALL_DY=-5
 MAXIMUM_BALL_DY= 5
+for i in range (NUMBER_OF_BALLS):
+	
+	x = random.randint(-screen_width +MAXIMUM_BALL_RADUIS)
+	x = random.randint(screen_width - MAXIMUM_BALL_RADUIS)
+	y = random.randint(-screen_height + MAXIMUM_BALL_RADUIS)
+	y = random.randint(screen_height - MAXIMUM_BALL_RADUIS)
+	dx = random.randint(MINIMUM_BALL_DX)
+	dx = random.randint(MAXIMUM_BALL_DX)
+	dy = random.randint(MINIMUM_BALL_DY)
+	dy = random.randint(MAXIMUM_BALL_DY)
+	radius = random.randint(MINIMUM_BALL_RADUIS)
+	radius = random.randint(MAXIMUM_BALL_RADUIS)
+	color = (random.random(), random.random(), random.random())
+
+
 
 
     
@@ -52,6 +68,7 @@ myball=Ball(100,200,50,50,50,random_color)
 myball.move(100,100)
 myball2=Ball(100,200,50,50,50,random_color)
 myball2.move(100,100)
+
 
 while True:
 	myball.move(screen_width,screen_height)
