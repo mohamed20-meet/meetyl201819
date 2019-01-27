@@ -3,7 +3,7 @@ import random
 import turtle
 turtle.hideturtle()
 colormode(255)
-turtle.setup(1200,8000)
+turtle.setup(1920,1800)
 
 
 class Ball(Turtle):
@@ -22,25 +22,27 @@ class Ball(Turtle):
 		b = random.randint (0,255)
 		self.color((r,g,b))
 
+
 	def move(self, screen_width, screen_height):
-			current_x = self.xcor()
-			current_y = self.ycor()
-			new_x = current_x + self.dx
-			new_y = current_y + self.dy
-			right_side_ball = new_x + self.radius
-			left_side_ball = new_x - self.radius
-			top_side_ball = new_y + self.radius
-			bottom_side_ball = new_y - self.radius
-			self.goto (new_x , new_y)
 
-			if right_side_ball >= screen_width:
-				self.dx = -self.dx
-			
-			if left_side_ball <= -screen_width:
-				self.dx = -self.dx
-			
-			if top_side_ball >= screen_height:
-				self.dy = -self.dy
+		current_x = self.xcor()
+		current_y = self.ycor()
+		new_x = current_x + self.dx
+		new_y = current_y + self.dy
+		right_side_ball = new_x + self.radius
+		left_side_ball = new_x - self.radius
+		top_side_ball = new_y + self.radius
+		bottom_side_ball = new_y - self.radius
+		self.goto (new_x , new_y)
 
-			if bottom_side_ball <= -screen_height:
-				self.dy = -self.dy
+		if right_side_ball >= screen_width:
+			self.dx = -self.dx
+		
+		if left_side_ball <= -screen_width:
+			self.dx = -self.dx
+		
+		if top_side_ball >= screen_height:
+			self.dy = -self.dy
+
+		if bottom_side_ball <= -screen_height:
+			self.dy = -self.dy
